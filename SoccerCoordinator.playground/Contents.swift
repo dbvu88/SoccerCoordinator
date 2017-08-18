@@ -184,17 +184,36 @@ func sort( players: [Dictionary<String,Any>]) -> () {
     }
 }
 
-//use the sorting method on the experienced team and the inexperienced team to create 3 teams Shark, Dragon, and Raptors
-
+//uses the sorting method on the experienced team and the inexperienced team to create 3 teams Shark, Dragon, and Raptors
 sort(players: experiencedPlayers)
 sort(players: inexperiencedPlayers)
 
-teamSharks.count
-teamDragons.count
-teamRaptors.count
+//create a letters collection to store letters for all players
+var letters: [String] = [];
+
+//create a generating method to generate letters for players and add them to the letters collection
+func generateLetters(for team: [Dictionary<String,Any>], name: String, on time: String) -> () {
+    for player in team {
+        letters.append("Dear \(player["guardian"]!), this letter is to imform you that \(player["name"]!) has been assigned to team \(name). Please make sure that  \(player["name"]!) will attend the first soccer practice on \(time). Thank you.")
+    }
+}
+
+/*
+ Generate letters for the following teams and practice information:
+    Dragons - March 17, 1pm
+    Sharks - March 17, 3pm
+    Raptors - March 18, 1pm
+*/
+generateLetters(for: teamSharks, name: "Dragons", on: "March 17, 3pm")
+generateLetters(for: teamSharks, name: "Sharks", on: "March 17, 3pm")
+generateLetters(for: teamRaptors, name: "Raptors", on: "March 18, 1pm")
 
 
+//print all the items in the letters collection to the console
 
+for letter in letters {
+    print(letter)
+}
 
 
 
