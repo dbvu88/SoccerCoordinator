@@ -204,7 +204,7 @@ func generateLetters(for team: [Dictionary<String,Any>], name: String, on time: 
     Sharks - March 17, 3pm
     Raptors - March 18, 1pm
 */
-generateLetters(for: teamSharks, name: "Dragons", on: "March 17, 3pm")
+generateLetters(for: teamDragons, name: "Dragons", on: "March 17, 3pm")
 generateLetters(for: teamSharks, name: "Sharks", on: "March 17, 3pm")
 generateLetters(for: teamRaptors, name: "Raptors", on: "March 18, 1pm")
 
